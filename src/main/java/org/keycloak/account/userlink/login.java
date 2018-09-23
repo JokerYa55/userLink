@@ -7,7 +7,10 @@ package org.keycloak.account.userlink;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.annotation.security.DeclareRoles;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.HttpConstraint;
+import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author vasil
  */
 @WebServlet(name = "login", urlPatterns = {"/login"})
+@DeclareRoles("link_account")
+@ServletSecurity(@HttpConstraint(rolesAllowed = {"link_account"}))
 public class login extends HttpServlet {
 
     /**
