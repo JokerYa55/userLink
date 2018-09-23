@@ -1,0 +1,9 @@
+{
+    "realm": "b2b",
+    "auth-server-url": "http://192.168.0.20:8080/auth",
+    "ssl-required": "external",
+    "resource": "linkAccount",
+    "credentials": {
+        "secret": "d77472bc-c9ec-462d-89f0-b9b6e8d4b1ae"
+    }
+}
